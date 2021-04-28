@@ -4,9 +4,9 @@ Comparision of Uber and Lyft:
 2. Which company gets more rides during rains?
 3. Try to find the relation of:
 	a. distance and price
-	b. surge multiplier (imply the price) and weekdays
+	b. surge multiplier (imply the price) and weekdays (done)
 	c. surge multiplier and final destination
-4. Which surge-multipler happens most frequently? which is the least frequent?
+4. Which surge-multipler happens most frequently? which is the least frequent? (done)
 5. How does surge-multipler change during the day? (morning, afternoon, evening)
 6. Top five most source and destination for both app
 7. what car type is most used by people? (shared or non-shared)

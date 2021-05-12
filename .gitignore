@@ -1,4 +1,5 @@
 DataSet/*
 .ipynb_checkpoints/*
-data/*
-data/
+data/data.csv
+env/
+venv/

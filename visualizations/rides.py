@@ -34,7 +34,7 @@ def top_rides(df_uber, df_lyft):
                  hover_data = ['count'],
                  color = 'cab_type',
                  color_discrete_map={'Lyft': '#FF00BF','Uber':'#000000'},
-                 width = 600, height = 400,
+                 width = 1000, height = 500,
                 animation_frame = 'date')
     fig["layout"].pop("updatemenus")
 

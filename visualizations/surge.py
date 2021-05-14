@@ -21,7 +21,7 @@ def surge_multiplier_bar(df_lyft):
                     x='Weekday', y='Count', 
                     color = 'Surge',
                     color_discrete_sequence= px.colors.qualitative.Vivid,
-                    width = 600, height =350,
+
                     barmode= 'group'
                     )
 

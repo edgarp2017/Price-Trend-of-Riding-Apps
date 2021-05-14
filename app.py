@@ -51,6 +51,30 @@ mean_lyft = mean_price_service(df_lyft)
 
 app.layout = html.Div(children=[
     html.H1("Uber vs Lyft"),
+    html.Div(children=[
+        html.H3('''
+            Top five Rides for Uber and Lyft
+        '''),
+        html.P('''
+            Looking at the top 5 rides for uber and Lyft
+        '''),
+    ], className="mt-5 mr-5 container"),
+
+    html.Div(children=[
+        dcc.Graph(
+            id='question-6',
+            figure=fig_question_6
+        ),
+    ], className="container"),
+
+    html.Div(children=[
+        html.H3('''
+            Average Price vs Distance
+        '''),
+        html.P('''
+            Took the average price for each distance
+        '''),
+    ], className="mt-5 mr-5 container"),
 
     html.Div(children=[
         dcc.Graph(
@@ -61,35 +85,61 @@ app.layout = html.Div(children=[
             id='lyft-mean',
             figure=mean_lyft
         ),
+    ], className="row justify-content-center"),
+
+    html.Div(children=[
+        html.H3('''
+            Rides on a rainy Day
+        '''),
+        html.P('''
+            Taking a look of the rides on a rainy day. We only showing rides that
+            rained more than the mean in our data. The rain is measured in inches.
+        '''),
+    ], className="mt-5 container"),
+
+    html.Div(children=[
+        dcc.Graph(
+            id='question-1',
+            figure=fig
+        ),
+        dcc.Graph(
+            id='question-2',
+            figure=fig_question_2
+        ),
+    ], className="row justify-content-center"),
+
+
+    html.Div(children=[
+        html.H3('''
+            Shared vs NonShared
+        '''),
+    ], className="mt-5 container"),
+
+
+    html.Div(children=[
+        dcc.Graph(
+            id='question-7',
+            figure=fig_question_7
+        ), 
+    ], className="row justify-content-center"),
+
+
+    html.Div(children=[
+        html.H3('''
+            Surge multiplier(Lyft)
+        '''),
+        html.P('''
+            Here we are showing the surge multipler to see what day has the highest multipler.
+        ''')
+    ], className="mt-5 container"),
+
+    html.Div(children=[
         dcc.Graph(
             id='surgeBar',
             figure=surgeBar
         ),
-        html.Div(children=[
-            dcc.Graph(
-                id='question-1',
-                figure=fig
-            )
-        ], className="col"),
-
-        html.Div(children=[
-            dcc.Graph(
-                id='question-2',
-                figure=fig_question_2
-            ),
-        ], className="col"),
-    ], className="row"),
-
-    dcc.Graph(
-        id='question-6',
-        figure=fig_question_6
-    ), 
-
-    dcc.Graph(
-        id='question-7',
-        figure=fig_question_7
-    ), 
-], className="mt-5")
+    ], className="row justify-content-center"), 
+], className="container")
 
 if __name__ == '__main__':
     app.run_server(debug=True)

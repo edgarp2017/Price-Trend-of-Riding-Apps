@@ -34,9 +34,12 @@ def top_rides(df_uber, df_lyft):
                  hover_data = ['count'],
                  color = 'cab_type',
                  color_discrete_map={'Lyft': '#FF00BF','Uber':'#000000'},
-                 width = 1000, height = 500,
                 animation_frame = 'date')
     fig["layout"].pop("updatemenus")
+    fig.update_layout({
+        "plot_bgcolor": "rgba(0, 0, 0, 0)",
+        "paper_bgcolor": "rgba(0, 0, 0, 0)",
+    },font_color="#FFFFFF")
 
     return fig
 
@@ -67,5 +70,9 @@ def share_rides(df_uber, df_lyft):
                  animation_frame = 'date'
                 )
     fig["layout"].pop("updatemenus")
+    fig.update_layout({
+        "plot_bgcolor": "rgba(0, 0, 0, 0)",
+        "paper_bgcolor": "rgba(0, 0, 0, 0)",
+    },font_color="#FFFFFF")
 
     return fig

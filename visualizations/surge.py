@@ -17,12 +17,17 @@ def surge_multiplier_bar(df_lyft):
     high_surge.sort_values(by = 'Day_of_Week', inplace = True)
 
     high_surge['Surge'] = high_surge['Surge'].astype(str)
+    
     fig = px.bar(high_surge, 
-                    x='Weekday', y='Count', 
-                    color = 'Surge',
-                    color_discrete_sequence= px.colors.qualitative.Vivid,
+        x='Weekday', y='Count', 
+        color = 'Surge',
+        color_discrete_sequence= px.colors.qualitative.Vivid,
+        barmode= 'group'
+    )
 
-                    barmode= 'group'
-                    )
+    fig.update_layout({
+        "plot_bgcolor": "rgba(0, 0, 0, 0)",
+        "paper_bgcolor": "rgba(0, 0, 0, 0)",
+    },font_color="#FFFFFF")
 
     return fig

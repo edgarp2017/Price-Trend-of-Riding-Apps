@@ -11,7 +11,7 @@ from visualizations.surge import surge_multiplier_bar
 from visualizations.price import mean_price_service
 
 app = dash.Dash(__name__, external_stylesheets=["https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"])
-
+app.title = 'Uber vs Lyft'
 server = app.server
 
 # loading in both dataframes 

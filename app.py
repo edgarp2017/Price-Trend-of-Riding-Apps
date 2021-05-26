@@ -12,6 +12,8 @@ from visualizations.price import mean_price_service
 
 app = dash.Dash(__name__, external_stylesheets=["https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"])
 
+server = app.server
+
 # loading in both dataframes 
 df_1 = pd.read_csv("data/dataframe1.csv")
 df_2 = pd.read_csv("data/dataframe2.csv")
@@ -264,7 +266,6 @@ def rain_ride_updater(value):
         fig = amount_rides_in_rain(df_rain, 'UberX', 'Lyft')
 
     return fig
-
 
 
 if __name__ == '__main__':
